@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Vue</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <p>{{ title }}</p>
+</div>
+
+<script>
+  new Vue({
+  el: "#app",
+  data: {
+    title: "Hello World"
+  },
+  methods: {
+    sayHello: function() {
+      return: "Hello!"
+    }
+  }
+})
+</script>
+
+</body>
+</html>
