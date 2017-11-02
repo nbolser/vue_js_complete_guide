@@ -1,0 +1,35 @@
+<script src="vue.js"></script>
+
+<div id="exercise">
+    <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
+    <hr>
+    <p>{{ age * 3 }}</p>
+    <hr>
+    <p>{{ randomFloat() }}</p>
+    <hr>
+    <div>
+        <img v-bind:src="url" style="width:100px;height:100px" >
+    </div>
+    <hr>
+    <div>
+        <input type="text" v-model:input="name">
+    </div>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: "#exercise",
+        data: {
+            name: 'Nathan',
+            age: '36',
+            url: "http://pbs.twimg.com/profile_images/804056474829717504/TGKoRIBx.jpg"
+        },
+        methods: {
+            randomFloat: function() {
+                return Math.random();
+            }
+        }
+
+
+    })
+</script>
